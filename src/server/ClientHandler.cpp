@@ -1,5 +1,6 @@
 #include "../../include/server/ClientHandler.h"
 #include "../../include/parser/CommandParser.h"
+#include "../../include/parser/RespParser.h"
 
 #include <iostream>
 #include <string>
@@ -17,7 +18,8 @@ ClientHandler::ClientHandler(
 
 void ClientHandler::handle()
 {
-    CommandParser parser;
+    CommandParser commandParser;
+    RespParser respParser;
     while (true)
     {
         std::string message =
@@ -30,8 +32,15 @@ void ClientHandler::handle()
             break;
         }
 
-        Command command =
-            parser.parse(message);
+        Command command;
+        if (!message.empty() && message[0] == '*')
+        {
+            command = respParser.parse(message);
+        }
+        else
+        {
+            command = commandParser.parse(message);
+        }
 
         std::string response =
             executor_.execute(command);
