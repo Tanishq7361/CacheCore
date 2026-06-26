@@ -20,4 +20,5 @@ public:
         const std::string& key) const;
 
     bool del(const std::string& key);
+    bool exists(const std::string& key) const;
 };

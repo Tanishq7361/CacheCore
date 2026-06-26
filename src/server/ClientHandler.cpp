@@ -101,6 +101,26 @@ void ClientHandler::handle()
                 deleted ? "1\n" : "0\n"
             );
         }
+        else if (command.name == "EXISTS")
+        {
+            if (command.arguments.size() != 1)
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "ERR invalid EXISTS command\n"
+                );
+
+                continue;
+            }
+
+            bool found =
+                database_.exists(command.arguments[0]);
+
+            socket_.sendMessage(
+                clientFd_,
+                found ? "1\n" : "0\n"
+            );
+        }
         else
         {
             socket_.sendMessage(

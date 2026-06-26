@@ -26,3 +26,8 @@ bool Database::del(const std::string& key)
 {
     return data_.erase(key) > 0;
 }
+
+bool Database::exists(const std::string& key) const
+{
+    return data_.find(key) != data_.end();
+}
