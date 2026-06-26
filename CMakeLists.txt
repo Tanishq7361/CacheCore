@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(
     CacheCore
-
+    src/server/Server.cpp
     server/main.cpp
     src/socket/Socket.cpp
 )

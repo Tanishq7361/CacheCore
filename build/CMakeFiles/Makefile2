@@ -81,12 +81,12 @@ clean: CMakeFiles/CacheCore.dir/clean
 CMakeFiles/CacheCore.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=1,2,3 "Built target CacheCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=1,2,3,4 "Built target CacheCore"
 .PHONY : CMakeFiles/CacheCore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CacheCore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanishq/project/CacheCore/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanishq/project/CacheCore/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CacheCore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanishq/project/CacheCore/build/CMakeFiles 0
 .PHONY : CMakeFiles/CacheCore.dir/rule

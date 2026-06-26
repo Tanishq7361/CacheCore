@@ -69,10 +69,24 @@ include CMakeFiles/CacheCore.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CacheCore.dir/flags.make
 
+CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: CMakeFiles/CacheCore.dir/flags.make
+CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: /home/tanishq/project/CacheCore/src/server/Server.cpp
+CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: CMakeFiles/CacheCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CacheCore.dir/src/server/Server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CacheCore.dir/src/server/Server.cpp.o -MF CMakeFiles/CacheCore.dir/src/server/Server.cpp.o.d -o CMakeFiles/CacheCore.dir/src/server/Server.cpp.o -c /home/tanishq/project/CacheCore/src/server/Server.cpp
+
+CMakeFiles/CacheCore.dir/src/server/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CacheCore.dir/src/server/Server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanishq/project/CacheCore/src/server/Server.cpp > CMakeFiles/CacheCore.dir/src/server/Server.cpp.i
+
+CMakeFiles/CacheCore.dir/src/server/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CacheCore.dir/src/server/Server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanishq/project/CacheCore/src/server/Server.cpp -o CMakeFiles/CacheCore.dir/src/server/Server.cpp.s
+
 CMakeFiles/CacheCore.dir/server/main.cpp.o: CMakeFiles/CacheCore.dir/flags.make
 CMakeFiles/CacheCore.dir/server/main.cpp.o: /home/tanishq/project/CacheCore/server/main.cpp
 CMakeFiles/CacheCore.dir/server/main.cpp.o: CMakeFiles/CacheCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CacheCore.dir/server/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CacheCore.dir/server/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CacheCore.dir/server/main.cpp.o -MF CMakeFiles/CacheCore.dir/server/main.cpp.o.d -o CMakeFiles/CacheCore.dir/server/main.cpp.o -c /home/tanishq/project/CacheCore/server/main.cpp
 
 CMakeFiles/CacheCore.dir/server/main.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/CacheCore.dir/server/main.cpp.s: cmake_force
 CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: CMakeFiles/CacheCore.dir/flags.make
 CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCore/src/socket/Socket.cpp
 CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: CMakeFiles/CacheCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o -MF CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o.d -o CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o -c /home/tanishq/project/CacheCore/src/socket/Socket.cpp
 
 CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.i: cmake_force
@@ -99,17 +113,19 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.s: cmake_force
 
 # Object files for target CacheCore
 CacheCore_OBJECTS = \
+"CMakeFiles/CacheCore.dir/src/server/Server.cpp.o" \
 "CMakeFiles/CacheCore.dir/server/main.cpp.o" \
 "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o"
 
 # External object files for target CacheCore
 CacheCore_EXTERNAL_OBJECTS =
 
+CacheCore: CMakeFiles/CacheCore.dir/src/server/Server.cpp.o
 CacheCore: CMakeFiles/CacheCore.dir/server/main.cpp.o
 CacheCore: CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o
 CacheCore: CMakeFiles/CacheCore.dir/build.make
 CacheCore: CMakeFiles/CacheCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CacheCore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tanishq/project/CacheCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CacheCore"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CacheCore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

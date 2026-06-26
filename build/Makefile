@@ -153,6 +153,30 @@ server/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/server/main.cpp.s
 .PHONY : server/main.cpp.s
 
+src/server/Server.o: src/server/Server.cpp.o
+.PHONY : src/server/Server.o
+
+# target to build an object file
+src/server/Server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/server/Server.cpp.o
+.PHONY : src/server/Server.cpp.o
+
+src/server/Server.i: src/server/Server.cpp.i
+.PHONY : src/server/Server.i
+
+# target to preprocess a source file
+src/server/Server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/server/Server.cpp.i
+.PHONY : src/server/Server.cpp.i
+
+src/server/Server.s: src/server/Server.cpp.s
+.PHONY : src/server/Server.s
+
+# target to generate assembly for a file
+src/server/Server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/server/Server.cpp.s
+.PHONY : src/server/Server.cpp.s
+
 src/socket/Socket.o: src/socket/Socket.cpp.o
 .PHONY : src/socket/Socket.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... server/main.o"
 	@echo "... server/main.i"
 	@echo "... server/main.s"
+	@echo "... src/server/Server.o"
+	@echo "... src/server/Server.i"
+	@echo "... src/server/Server.s"
 	@echo "... src/socket/Socket.o"
 	@echo "... src/socket/Socket.i"
 	@echo "... src/socket/Socket.s"

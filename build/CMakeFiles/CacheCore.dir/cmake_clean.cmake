@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CacheCore.dir/server/main.cpp.o"
   "CMakeFiles/CacheCore.dir/server/main.cpp.o.d"
+  "CMakeFiles/CacheCore.dir/src/server/Server.cpp.o"
+  "CMakeFiles/CacheCore.dir/src/server/Server.cpp.o.d"
   "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o"
   "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o.d"
   "CacheCore"
