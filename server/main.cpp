@@ -1,0 +1,29 @@
+#include "../include/socket/Socket.h"
+
+#include <iostream>
+
+int main()
+{
+    try
+    {
+        Socket socket;
+
+        socket.create();
+
+        std::cout
+            << "Socket created. FD = "
+            << socket.getFd()
+            << '\n';
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr
+            << "Error: "
+            << e.what()
+            << '\n';
+
+        return 1;
+    }
+
+    return 0;
+}
