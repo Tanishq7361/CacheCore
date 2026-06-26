@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/CacheCore.dir/server/main.cpp.o CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o -o CacheCore 

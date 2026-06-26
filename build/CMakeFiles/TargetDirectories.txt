@@ -1,0 +1,3 @@
+/home/tanishq/project/CacheCore/build/CMakeFiles/CacheCore.dir
+/home/tanishq/project/CacheCore/build/CMakeFiles/edit_cache.dir
+/home/tanishq/project/CacheCore/build/CMakeFiles/rebuild_cache.dir
