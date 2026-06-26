@@ -11,6 +11,7 @@ add_executable(
     server/main.cpp
     src/socket/Socket.cpp
     src/server/ClientHandler.cpp
+    src/parser/CommandParser.cpp
 )
 
 target_include_directories(
