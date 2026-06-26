@@ -22,5 +22,8 @@ private:
 
 public:
     explicit LRUCache(std::size_t capacity);
-    
+
+    void put(const std::string& key);
+
+    bool contains(const std::string& key) const;
 };
