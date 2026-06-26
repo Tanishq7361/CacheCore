@@ -41,7 +41,7 @@ void ClientHandler::handle()
         {
             command = commandParser.parse(message);
         }
-
+        
         std::string response =
             executor_.execute(command);
 
