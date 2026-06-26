@@ -25,4 +25,9 @@ public:
     bool exists(const std::string& key) const;
     std::vector<std::string> keys() const;
     void clear();
+
+    bool expire(
+    const std::string& key,
+    int seconds);
+    
 };

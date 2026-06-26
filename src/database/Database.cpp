@@ -1,4 +1,5 @@
 #include "../../include/database/Database.h"
+#include <chrono>
 
 bool Database::set(
     const std::string& key,
@@ -49,4 +50,24 @@ std::vector<std::string> Database::keys() const
 void Database::clear()
 {
     data_.clear();
+}
+
+bool Database::expire(
+    const std::string& key,
+    int seconds)
+{
+    auto it = data_.find(key);
+
+    if (it == data_.end())
+    {
+        return false;
+    }
+
+    it->second.hasExpiry = true;
+
+    it->second.expiryTime =
+        std::chrono::steady_clock::now() +
+        std::chrono::seconds(seconds);
+
+    return true;
 }

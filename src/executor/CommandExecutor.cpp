@@ -92,5 +92,22 @@ std::string CommandExecutor::execute(const Command& command)
         return "OK\n";
     }
 
+    else if (command.name == "EXPIRE")
+    {
+        if (command.arguments.size() != 2)
+        {
+            return "ERR invalid EXPIRE command\n";
+        }
+
+        int seconds =
+            std::stoi(command.arguments[1]);
+
+        return database_.expire(
+                command.arguments[0],
+                seconds)
+            ? "1\n"
+            : "0\n";
+    }
+
     return "ERR unknown command\n";
 }
