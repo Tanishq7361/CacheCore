@@ -153,6 +153,30 @@ server/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/server/main.cpp.s
 .PHONY : server/main.cpp.s
 
+src/server/ClientHandler.o: src/server/ClientHandler.cpp.o
+.PHONY : src/server/ClientHandler.o
+
+# target to build an object file
+src/server/ClientHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o
+.PHONY : src/server/ClientHandler.cpp.o
+
+src/server/ClientHandler.i: src/server/ClientHandler.cpp.i
+.PHONY : src/server/ClientHandler.i
+
+# target to preprocess a source file
+src/server/ClientHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.i
+.PHONY : src/server/ClientHandler.cpp.i
+
+src/server/ClientHandler.s: src/server/ClientHandler.cpp.s
+.PHONY : src/server/ClientHandler.s
+
+# target to generate assembly for a file
+src/server/ClientHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.s
+.PHONY : src/server/ClientHandler.cpp.s
+
 src/server/Server.o: src/server/Server.cpp.o
 .PHONY : src/server/Server.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... server/main.o"
 	@echo "... server/main.i"
 	@echo "... server/main.s"
+	@echo "... src/server/ClientHandler.o"
+	@echo "... src/server/ClientHandler.i"
+	@echo "... src/server/ClientHandler.s"
 	@echo "... src/server/Server.o"
 	@echo "... src/server/Server.i"
 	@echo "... src/server/Server.s"

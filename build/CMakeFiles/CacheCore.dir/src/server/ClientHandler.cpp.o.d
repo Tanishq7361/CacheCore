@@ -1,7 +1,7 @@
-CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: \
- /home/tanishq/project/CacheCore/src/server/Server.cpp \
+CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o: \
+ /home/tanishq/project/CacheCore/src/server/ClientHandler.cpp \
  /usr/include/stdc-predef.h \
- /home/tanishq/project/CacheCore/src/server/../../include/server/Server.h \
+ /home/tanishq/project/CacheCore/src/server/../../include/server/ClientHandler.h \
  /home/tanishq/project/CacheCore/src/server/../../include/server/../socket/Socket.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -144,7 +144,6 @@ CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /home/tanishq/project/CacheCore/src/server/../../include/server/ClientHandler.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/ext/atomicity.h \

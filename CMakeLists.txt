@@ -10,6 +10,7 @@ add_executable(
     src/server/Server.cpp
     server/main.cpp
     src/socket/Socket.cpp
+    src/server/ClientHandler.cpp
 )
 
 target_include_directories(

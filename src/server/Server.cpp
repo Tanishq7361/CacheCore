@@ -1,5 +1,5 @@
 #include "../../include/server/Server.h"
-
+#include "../../include/server/ClientHandler.h"
 #include <iostream>
 #include <string>
 
@@ -41,27 +41,10 @@ void Server::start()
         std::cout
             << "Client connected\n";
 
-        while (true)
-        {
-            std::string message =
-                socket_.receive(clientFd);
+        ClientHandler handler(
+            socket_,
+            clientFd);
 
-            if (message.empty())
-            {
-                std::cout
-                << "Client disconnected\n";
-                break;
-            }
-            // close(clientFd);
-            std::cout
-                << "Received: "
-                << message
-                << '\n';
-
-            socket_.sendMessage(
-                clientFd,
-                "Message received by CacheCore\n"
-            );
-        }
+        handler.handle();
     }
 }
