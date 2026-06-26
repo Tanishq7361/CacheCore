@@ -19,7 +19,7 @@ public:
         const std::string& value);
 
     std::string get(
-        const std::string& key) const;
+        const std::string& key);
 
     bool del(const std::string& key);
     bool exists(const std::string& key) const;
@@ -29,5 +29,6 @@ public:
     bool expire(
     const std::string& key,
     int seconds);
-    
+
+    bool isExpired(const Entry& entry) const;
 };

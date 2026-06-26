@@ -11,12 +11,19 @@ bool Database::set(
 }
 
 std::string Database::get(
-    const std::string& key) const
+    const std::string& key) 
 {
     auto it = data_.find(key);
 
     if (it == data_.end())
     {
+        return "(nil)";
+    }
+
+    if (isExpired(it->second))
+    {
+        data_.erase(it);
+
         return "(nil)";
     }
 
@@ -70,4 +77,14 @@ bool Database::expire(
         std::chrono::seconds(seconds);
 
     return true;
+}
+
+bool Database::isExpired(const Entry& entry) const
+{
+    if (!entry.hasExpiry)
+    {
+        return false;
+    }
+
+    return std::chrono::steady_clock::now() >= entry.expiryTime;
 }

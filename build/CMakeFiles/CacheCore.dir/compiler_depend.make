@@ -3,6 +3,7 @@
 
 CMakeFiles/CacheCore.dir/server/main.cpp.o: /home/tanishq/project/CacheCore/server/main.cpp \
   /home/tanishq/project/CacheCore/include/database/Database.h \
+  /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
   /home/tanishq/project/CacheCore/include/server/Server.h \
   /usr/include/alloca.h \
@@ -190,6 +191,7 @@ CMakeFiles/CacheCore.dir/server/main.cpp.o: /home/tanishq/project/CacheCore/serv
 
 CMakeFiles/CacheCore.dir/src/database/Database.cpp.o: /home/tanishq/project/CacheCore/src/database/Database.cpp \
   /home/tanishq/project/CacheCore/include/database/Database.h \
+  /home/tanishq/project/CacheCore/include/database/Entry.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -352,6 +354,7 @@ CMakeFiles/CacheCore.dir/src/database/Database.cpp.o: /home/tanishq/project/Cach
 
 CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.o: /home/tanishq/project/CacheCore/src/executor/CommandExecutor.cpp \
   /home/tanishq/project/CacheCore/include/database/Database.h \
+  /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
   /usr/include/alloca.h \
@@ -720,6 +723,7 @@ CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.o: /home/tanishq/project/C
 CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o: /home/tanishq/project/CacheCore/src/server/ClientHandler.cpp \
   /home/tanishq/project/CacheCore/include/parser/CommandParser.h \
   /home/tanishq/project/CacheCore/include/database/Database.h \
+  /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
@@ -950,6 +954,7 @@ CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o: /home/tanishq/project/C
 
 CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: /home/tanishq/project/CacheCore/src/server/Server.cpp \
   /home/tanishq/project/CacheCore/include/database/Database.h \
+  /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
@@ -1594,12 +1599,6 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCor
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
-/usr/include/c++/13/bits/predefined_ops.h:
-
-/usr/include/c++/13/bits/ranges_cmp.h:
-
-/usr/include/c++/13/iosfwd:
-
 /usr/include/c++/13/cwchar:
 
 /usr/include/c++/13/bits/nested_exception.h:
@@ -1611,18 +1610,6 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCor
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/13/bits/basic_string.tcc:
-
-/usr/include/c++/13/bit:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/13/type_traits:
-
-/usr/include/c++/13/bits/enable_special_members.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -1640,6 +1627,14 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCor
 
 /usr/include/features-time64.h:
 
+/usr/include/alloca.h:
+
+/usr/include/c++/13/bits/ranges_cmp.h:
+
+/usr/include/c++/13/iosfwd:
+
+/usr/include/c++/13/bits/predefined_ops.h:
+
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/stdc-predef.h:
@@ -1654,9 +1649,29 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCor
 
 /home/tanishq/project/CacheCore/include/database/Database.h:
 
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/c++/13/bit:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/13/type_traits:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/c++/13/cerrno:
+
+/usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/c++/13/bits/requires_hosted.h:
+
+/home/tanishq/project/CacheCore/include/database/Entry.h:
 
 /usr/include/c++/13/bits/string_view.tcc:
 
@@ -1684,6 +1699,10 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCor
 
 /home/tanishq/project/CacheCore/server/main.cpp:
 
+/usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/c++/13/bits/concept_check.h:
+
 /home/tanishq/project/CacheCore/include/server/Server.h:
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
@@ -1707,18 +1726,6 @@ CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o: /home/tanishq/project/CacheCor
 /usr/include/c++/13/numbers:
 
 /usr/include/c++/13/string:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/usr/include/c++/13/cerrno:
-
-/usr/include/stdio.h:
-
-/usr/include/c++/13/bits/concept_check.h:
-
-/usr/include/c++/13/bits/alloc_traits.h:
-
-/usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
 /usr/include/asm-generic/errno.h:
 
