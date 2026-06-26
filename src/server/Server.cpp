@@ -14,7 +14,10 @@ Server::Server(int port)
 void Server::start()
 {
     socket_.create();
-
+    serializer_.load(
+        database_,
+        "cachecore.rdb"
+    );
     std::cout
         << "Socket created. FD = "
         << socket_.getFd()

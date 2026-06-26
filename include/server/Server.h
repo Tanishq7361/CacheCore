@@ -5,6 +5,7 @@
 #include "../ttl/TTLManager.h"
 #include <thread>
 #include <vector>
+#include "../persistence/Serializer.h"
 
 class Server
 {
@@ -14,6 +15,7 @@ private:
     TTLManager ttlManager_;
     int port_;
     std::vector<std::thread> clientThreads_;
+    Serializer serializer_;
 public:
     explicit Server(int port);
 
