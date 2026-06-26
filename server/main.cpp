@@ -8,9 +8,11 @@ int main()
     {
         Socket socket;
         socket.create();
+        std::cout << "Socket created. FD = "<< socket.getFd() << '\n';
         socket.bind(6379);
         std::cout<< "Bound to port 6379\n";
-        std::cout << "Socket created. FD = "<< socket.getFd() << '\n';
+        socket.listen(128);
+        std::cout << "Listening on port 6379\n";
     }
     catch (const std::exception& e)
     {

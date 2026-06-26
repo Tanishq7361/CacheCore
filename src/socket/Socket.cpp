@@ -53,6 +53,17 @@ void Socket::bind(int port)
     }
 }
 
+void Socket::listen(int backlog)
+{
+    if (::listen(fd_, backlog) == -1)
+    {
+        throw std::runtime_error(
+            std::string("Listen failed: ") +
+            std::strerror(errno)
+        );
+    }
+}
+
 int Socket::getFd() const
 {
     return fd_;

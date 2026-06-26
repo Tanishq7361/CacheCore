@@ -1,5 +1,6 @@
 #pragma once
 #include <stdexcept>
+#include <sys/socket.h>
 
 class Socket
 {
@@ -16,4 +17,6 @@ public:
     int getFd() const;
 
     void bind(int port);
+
+    void listen(int backlog = SOMAXCONN);
 };
