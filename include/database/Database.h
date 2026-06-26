@@ -36,4 +36,5 @@ public:
 
     long long ttl(const std::string& key);
     void removeExpiredKeys();
+    const std::unordered_map<std::string, Entry>& data() const;
 };

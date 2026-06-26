@@ -1025,6 +1025,9 @@ CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.o: /home/tanishq/project/C
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
+CMakeFiles/CacheCore.dir/src/persistence/Serializer.cpp.o: /home/tanishq/project/CacheCore/src/persistence/Serializer.cpp \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o: /home/tanishq/project/CacheCore/src/server/ClientHandler.cpp \
   /home/tanishq/project/CacheCore/include/parser/CommandParser.h \
   /home/tanishq/project/CacheCore/include/database/Database.h \
@@ -2114,6 +2117,8 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 /usr/include/c++/13/iostream:
 
 /home/tanishq/project/CacheCore/include/server/ClientHandler.h:
+
+/home/tanishq/project/CacheCore/src/persistence/Serializer.cpp:
 
 /home/tanishq/project/CacheCore/include/parser/CommandParser.h:
 

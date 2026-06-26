@@ -135,3 +135,8 @@ void Database::removeExpiredKeys()
         }
     }
 }
+
+const std::unordered_map<std::string, Entry>& Database::data() const
+{
+    return data_;
+}
