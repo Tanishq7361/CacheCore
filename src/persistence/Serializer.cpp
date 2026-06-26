@@ -75,5 +75,41 @@ bool Serializer::load(
         sizeof(count)
     );
 
+    for (std::size_t i = 0; i < count; i++)
+    {
+        std::size_t keyLength;
+
+        in.read(
+            reinterpret_cast<char*>(&keyLength),
+            sizeof(keyLength)
+        );
+
+        std::string key(keyLength, '\0');
+
+        in.read(
+            key.data(),
+            keyLength
+        );
+
+        std::size_t valueLength;
+
+        in.read(
+            reinterpret_cast<char*>(&valueLength),
+            sizeof(valueLength)
+        );
+
+        std::string value(valueLength, '\0');
+
+        in.read(
+            value.data(),
+            valueLength
+        );
+
+        database.set(
+            key,
+            value
+        );
+    }
+
     return true;
 }
