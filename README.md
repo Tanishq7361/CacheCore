@@ -77,84 +77,74 @@ The project focuses on understanding how an in-memory database works internally 
 
 ## Architecture
 
-```text
-                          +----------------------+
-                          |        Client        |
-                          |      (netcat)        |
-                          +----------+-----------+
-                                     |
-                                     | TCP
-                                     v
-                     +-------------------------------+
-                     |           Socket              |
-                     |   POSIX Socket Wrapper        |
-                     +---------------+---------------+
-                                     |
-                                     v
-                     +-------------------------------+
-                     |            Server             |
-                     | Accepts client connections    |
-                     +---------------+---------------+
-                                     |
-                          One Thread per Client
-                                     |
-                                     v
-                     +-------------------------------+
-                     |        ClientHandler          |
-                     | Receives & processes requests |
-                     +---------------+---------------+
-                                     |
-                   +-----------------+------------------+
-                   |                                    |
-                   v                                    v
-          +------------------+              +------------------+
-          |  CommandParser   |              |    RespParser    |
-          | Inline Commands  |              | RESP Requests    |
-          +---------+--------+              +---------+--------+
-                    \                           /
-                     \                         /
-                      +-----------------------+
-                      |   CommandExecutor     |
-                      +-----------+-----------+
-                                  |
-                                  v
-                     +-------------------------------+
-                     |          Database             |
-                     | Thread-safe Key-Value Store   |
-                     +-----------+-------------------+
-                                 |
-                 +---------------+---------------+
-                 |                               |
-                 v                               v
-        +------------------+          +----------------------+
-        |   TTLManager     |          |     Serializer       |
-        | Active Cleanup   |          | Binary SAVE / LOAD   |
-        +------------------+          +----------------------+
+```mermaid
+flowchart TD
+
+    A["Clients"]
+
+    B["Socket"]
+
+    C["Server"]
+
+    D1["ClientHandler 1"]
+    D2["ClientHandler 2"]
+    D3["ClientHandler N"]
+
+    E["CommandParser"]
+
+    F["RespParser"]
+
+    G["CommandExecutor"]
+
+    H["Database"]
+
+    I["TTLManager"]
+
+    J["Serializer"]
+
+    A -->|TCP| B
+    B --> C
+
+    C --> D1
+    C --> D2
+    C --> D3
+
+    D1 --> E
+    D1 --> F
+
+    D2 --> E
+    D2 --> F
+
+    D3 --> E
+    D3 --> F
+
+    E --> G
+    F --> G
+
+    G --> H
+
+    I --> H
+
+    H --> J
+
+    style A fill:#1E88E5,color:#fff
+    style B fill:#43A047,color:#fff
+    style C fill:#1565C0,color:#fff
+
+    style D1 fill:#8E24AA,color:#fff
+    style D2 fill:#8E24AA,color:#fff
+    style D3 fill:#8E24AA,color:#fff
+
+    style E fill:#FB8C00,color:#fff
+    style F fill:#00ACC1,color:#fff
+
+    style G fill:#FDD835,color:#000
+    style H fill:#1976D2,color:#fff
+    style I fill:#FBC02D,color:#000
+    style J fill:#E53935,color:#fff
 ```
+
 ---
-
-## Database Internals
-
-```text
-                  Database
-
-        +--------------------------+
-        | std::unordered_map        |
-        +------------+-------------+
-                     |
-      +--------------+----------------+
-      |                               |
-      v                               v
-  Key (string)                 Entry
-                               +----------------------+
-                               | value : string       |
-                               | expiry : time_point  |
-                               | hasExpiry : bool     |
-                               +----------------------+
-```
----
-
-
 
 ## Project Structure
 
@@ -255,27 +245,7 @@ localhost:6379
 
 ## Example
 
-```
-SET name Tanishq
-
-OK
-
-GET name
-
-Tanishq
-
-EXPIRE name 30
-
-OK
-
-TTL name
-
-29
-
-SAVE
-
-OK
-```
+![Example](docs/terminal.png)
 
 ---
 
