@@ -225,6 +225,30 @@ src/parser/CommandParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.s
 .PHONY : src/parser/CommandParser.cpp.s
 
+src/persistence/Serializer.o: src/persistence/Serializer.cpp.o
+.PHONY : src/persistence/Serializer.o
+
+# target to build an object file
+src/persistence/Serializer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/persistence/Serializer.cpp.o
+.PHONY : src/persistence/Serializer.cpp.o
+
+src/persistence/Serializer.i: src/persistence/Serializer.cpp.i
+.PHONY : src/persistence/Serializer.i
+
+# target to preprocess a source file
+src/persistence/Serializer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/persistence/Serializer.cpp.i
+.PHONY : src/persistence/Serializer.cpp.i
+
+src/persistence/Serializer.s: src/persistence/Serializer.cpp.s
+.PHONY : src/persistence/Serializer.s
+
+# target to generate assembly for a file
+src/persistence/Serializer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/persistence/Serializer.cpp.s
+.PHONY : src/persistence/Serializer.cpp.s
+
 src/server/ClientHandler.o: src/server/ClientHandler.cpp.o
 .PHONY : src/server/ClientHandler.o
 
@@ -342,6 +366,9 @@ help:
 	@echo "... src/parser/CommandParser.o"
 	@echo "... src/parser/CommandParser.i"
 	@echo "... src/parser/CommandParser.s"
+	@echo "... src/persistence/Serializer.o"
+	@echo "... src/persistence/Serializer.i"
+	@echo "... src/persistence/Serializer.s"
 	@echo "... src/server/ClientHandler.o"
 	@echo "... src/server/ClientHandler.i"
 	@echo "... src/server/ClientHandler.s"

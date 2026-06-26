@@ -15,6 +15,7 @@ add_executable(
     src/database/Database.cpp
     src/executor/CommandExecutor.cpp
     src/ttl/TTLManager.cpp
+    src/persistence/Serializer.cpp
 )
 
 target_include_directories(
