@@ -15,20 +15,27 @@ int main()
         socket.listen(128);
         std::cout << "Listening on port 6379\n";
 
+       std::cout << "Waiting for client...\n";
+
         int clientFd = socket.accept();
 
-        std::cout
-            << "Client connected. FD = "
-            << clientFd
-            << '\n';
+        std::cout << "Client connected\n";
+
+        std::cout << "Waiting for message...\n";
 
         std::string message =
             socket.receive(clientFd);
 
+        std::cout << "Received message\n";
         std::cout
             << "Received: "
             << message
             << '\n';
+
+        socket.sendMessage(
+            clientFd,
+            "Message received by CacheCore\n"
+        );
     }
     catch (const std::exception& e)
     {

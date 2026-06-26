@@ -25,4 +25,6 @@ public:
 
     std::string receive(int clientFd);
 
+    void sendMessage(int clientFd, const std::string& message);
+
 };

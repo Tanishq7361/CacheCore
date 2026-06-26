@@ -107,3 +107,22 @@ std::string Socket::receive(int clientFd)
 
     return std::string(buffer);
 }
+
+void Socket::sendMessage(
+    int clientFd,
+    const std::string& message)
+{
+    ssize_t bytesSent =
+        send(clientFd,
+             message.c_str(),
+             message.size(),
+             0);
+
+    if (bytesSent == -1)
+    {
+        throw std::runtime_error(
+            std::string("Send failed: ") +
+            std::strerror(errno)
+        );
+    }
+}
