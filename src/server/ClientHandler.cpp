@@ -121,6 +121,43 @@ void ClientHandler::handle()
                 found ? "1\n" : "0\n"
             );
         }
+        else if (command.name == "KEYS")
+        {
+            if (!command.arguments.empty())
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "ERR KEYS takes no arguments\n"
+                );
+
+                continue;
+            }
+
+            auto keys = database_.keys();
+
+            if (keys.empty())
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "(empty)\n"
+                );
+
+                continue;
+            }
+
+            std::string response;
+
+            for (const auto& key : keys)
+            {
+                response += key;
+                response += '\n';
+            }
+
+            socket_.sendMessage(
+                clientFd_,
+                response
+            );
+        }
         else
         {
             socket_.sendMessage(

@@ -31,3 +31,17 @@ bool Database::exists(const std::string& key) const
 {
     return data_.find(key) != data_.end();
 }
+
+std::vector<std::string> Database::keys() const
+{
+    std::vector<std::string> result;
+
+    result.reserve(data_.size());
+
+    for (const auto& [key, value] : data_)
+    {
+        result.push_back(key);
+    }
+
+    return result;
+}
