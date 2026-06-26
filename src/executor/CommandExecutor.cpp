@@ -153,6 +153,14 @@ std::string CommandExecutor::execute(const Command& command)
             ? "OK\n"
             : "ERR failed to load\n";
     }
+    else if (command.name == "PING")
+    {
+        if (!command.arguments.empty())
+        {
+            return "ERR PING takes no arguments\n";
+        }
 
+        return "PONG\n";
+    }
     return "ERR unknown command\n";
 }

@@ -16,6 +16,7 @@ add_executable(
     src/executor/CommandExecutor.cpp
     src/ttl/TTLManager.cpp
     src/persistence/Serializer.cpp
+    src/parser/RespParser.cpp
 )
 
 target_include_directories(

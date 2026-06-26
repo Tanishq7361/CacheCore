@@ -4,6 +4,7 @@
 CMakeFiles/CacheCore.dir/server/main.cpp.o: /home/tanishq/project/CacheCore/server/main.cpp \
   /home/tanishq/project/CacheCore/include/database/Database.h \
   /home/tanishq/project/CacheCore/include/database/Entry.h \
+  /home/tanishq/project/CacheCore/include/persistence/Serializer.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
   /home/tanishq/project/CacheCore/include/ttl/TTLManager.h \
   /home/tanishq/project/CacheCore/include/server/Server.h \
@@ -1567,8 +1568,8 @@ CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: /home/tanishq/project/CacheCor
   /home/tanishq/project/CacheCore/include/database/Database.h \
   /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
-  /home/tanishq/project/CacheCore/include/persistence/Serializer.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
+  /home/tanishq/project/CacheCore/include/persistence/Serializer.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
   /home/tanishq/project/CacheCore/include/ttl/TTLManager.h \
   /home/tanishq/project/CacheCore/include/server/ClientHandler.h \
@@ -2559,10 +2560,6 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 
 /usr/include/c++/13/bits/ranges_algobase.h:
 
-/home/tanishq/project/CacheCore/include/persistence/Serializer.h:
-
-/usr/include/c++/13/bits/stl_heap.h:
-
 /usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/parse_numbers.h:
@@ -2571,13 +2568,13 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 
 /usr/include/c++/13/numbers:
 
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/asm-generic/sockios.h:
-
 /usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/c++/13/cerrno:
+
+/usr/include/c++/13/bits/stl_heap.h:
+
+/home/tanishq/project/CacheCore/include/persistence/Serializer.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
@@ -2607,6 +2604,10 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/c++/13/bits/move.h:
+
 /usr/include/c++/13/bits/basic_ios.tcc:
 
 /usr/include/linux/stddef.h:
@@ -2622,18 +2623,6 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/c++/13/bits/node_handle.h:
-
-/usr/include/c++/13/bits/predefined_ops.h:
-
-/usr/include/c++/13/bits/ranges_cmp.h:
-
-/usr/include/c++/13/iosfwd:
-
-/home/tanishq/project/CacheCore/include/ttl/TTLManager.h:
-
-/usr/include/c++/13/bits/atomic_wait.h:
-
-/usr/include/features.h:
 
 /usr/include/wchar.h:
 
@@ -2671,9 +2660,17 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 
 /home/tanishq/project/CacheCore/include/database/Database.h:
 
-/usr/include/c++/13/bits/ostream.tcc:
+/usr/include/c++/13/bits/predefined_ops.h:
 
-/home/tanishq/project/CacheCore/server/main.cpp:
+/usr/include/c++/13/bits/ranges_cmp.h:
+
+/usr/include/c++/13/iosfwd:
+
+/home/tanishq/project/CacheCore/include/ttl/TTLManager.h:
+
+/usr/include/c++/13/bits/atomic_wait.h:
+
+/usr/include/features.h:
 
 /usr/include/c++/13/atomic:
 
@@ -2688,6 +2685,10 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/home/tanishq/project/CacheCore/server/main.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
@@ -2742,6 +2743,10 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
 /usr/include/c++/13/ostream:
+
+/usr/include/c++/13/bits/locale_facets_nonio.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /home/tanishq/project/CacheCore/include/socket/Socket.h:
 
@@ -2809,10 +2814,6 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/c++/13/bits/locale_facets_nonio.h:
-
 /usr/include/c++/13/ctime:
 
 /usr/include/c++/13/debug/assertions.h:
@@ -2876,6 +2877,10 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 /usr/include/c++/13/pstl/pstl_config.h:
 
 /usr/include/c++/13/span:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/c++/13/sstream:
 
 /usr/include/c++/13/stdexcept:
 
@@ -2972,10 +2977,6 @@ CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o: /home/tanishq/project/CacheCo
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/c++/13/sstream:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
