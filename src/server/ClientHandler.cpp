@@ -32,6 +32,12 @@ void ClientHandler::handle()
 
         Command command =
             parser.parse(message);
+        std::cout << "Command = [" << command.name << "]\n";
+
+        for (const auto& arg : command.arguments)
+        {
+            std::cout << "Arg = [" << arg << "]\n";
+        }
 
         if (command.name == "SET")
         {
@@ -73,6 +79,26 @@ void ClientHandler::handle()
             socket_.sendMessage(
                 clientFd_,
                 value + "\n"
+            );
+        }
+        else if (command.name == "DEL")
+        {
+            if (command.arguments.size() != 1)
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "ERR invalid DEL command\n"
+                );
+
+                continue;
+            }
+
+            bool deleted =
+                database_.del(command.arguments[0]);
+
+            socket_.sendMessage(
+                clientFd_,
+                deleted ? "1\n" : "0\n"
             );
         }
         else

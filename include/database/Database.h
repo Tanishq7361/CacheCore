@@ -18,4 +18,6 @@ public:
 
     std::string get(
         const std::string& key) const;
+
+    bool del(const std::string& key);
 };

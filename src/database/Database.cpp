@@ -21,3 +21,8 @@ std::string Database::get(
 
     return it->second;
 }
+
+bool Database::del(const std::string& key)
+{
+    return data_.erase(key) > 0;
+}
