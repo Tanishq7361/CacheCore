@@ -88,3 +88,31 @@ bool Database::isExpired(const Entry& entry) const
 
     return std::chrono::steady_clock::now() >= entry.expiryTime;
 }
+
+long long Database::ttl(const std::string& key)
+{
+    auto it = data_.find(key);
+
+    if (it == data_.end())
+    {
+        return -2;
+    }
+
+    if (isExpired(it->second))
+    {
+        data_.erase(it);
+        return -2;
+    }
+
+    if (!it->second.hasExpiry)
+    {
+        return -1;
+    }
+
+    auto remaining =
+        std::chrono::duration_cast<std::chrono::seconds>(
+            it->second.expiryTime -
+            std::chrono::steady_clock::now());
+
+    return remaining.count();
+}

@@ -108,6 +108,17 @@ std::string CommandExecutor::execute(const Command& command)
             ? "1\n"
             : "0\n";
     }
+    else if (command.name == "TTL")
+    {
+        if (command.arguments.size() != 1)
+        {
+            return "ERR invalid TTL command\n";
+        }
+
+        return std::to_string(
+            database_.ttl(command.arguments[0])
+        ) + "\n";
+    }
 
     return "ERR unknown command\n";
 }
