@@ -153,6 +153,30 @@ server/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/server/main.cpp.s
 .PHONY : server/main.cpp.s
 
+src/parser/CommandParser.o: src/parser/CommandParser.cpp.o
+.PHONY : src/parser/CommandParser.o
+
+# target to build an object file
+src/parser/CommandParser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.o
+.PHONY : src/parser/CommandParser.cpp.o
+
+src/parser/CommandParser.i: src/parser/CommandParser.cpp.i
+.PHONY : src/parser/CommandParser.i
+
+# target to preprocess a source file
+src/parser/CommandParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.i
+.PHONY : src/parser/CommandParser.cpp.i
+
+src/parser/CommandParser.s: src/parser/CommandParser.cpp.s
+.PHONY : src/parser/CommandParser.s
+
+# target to generate assembly for a file
+src/parser/CommandParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.s
+.PHONY : src/parser/CommandParser.cpp.s
+
 src/server/ClientHandler.o: src/server/ClientHandler.cpp.o
 .PHONY : src/server/ClientHandler.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... server/main.o"
 	@echo "... server/main.i"
 	@echo "... server/main.s"
+	@echo "... src/parser/CommandParser.o"
+	@echo "... src/parser/CommandParser.i"
+	@echo "... src/parser/CommandParser.s"
 	@echo "... src/server/ClientHandler.o"
 	@echo "... src/server/ClientHandler.i"
 	@echo "... src/server/ClientHandler.s"
