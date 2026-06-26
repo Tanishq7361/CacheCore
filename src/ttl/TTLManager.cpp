@@ -48,9 +48,7 @@ void TTLManager::cleanupLoop()
 {
     while (running_)
     {
-        std::cout
-            << "[TTL] Cleanup thread alive"
-            << std::endl;
+        database_.removeExpiredKeys();
 
         std::this_thread::sleep_for(
             std::chrono::seconds(1));
