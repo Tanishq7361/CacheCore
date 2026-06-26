@@ -153,6 +153,30 @@ server/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/server/main.cpp.s
 .PHONY : server/main.cpp.s
 
+src/database/Database.o: src/database/Database.cpp.o
+.PHONY : src/database/Database.o
+
+# target to build an object file
+src/database/Database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/database/Database.cpp.o
+.PHONY : src/database/Database.cpp.o
+
+src/database/Database.i: src/database/Database.cpp.i
+.PHONY : src/database/Database.i
+
+# target to preprocess a source file
+src/database/Database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/database/Database.cpp.i
+.PHONY : src/database/Database.cpp.i
+
+src/database/Database.s: src/database/Database.cpp.s
+.PHONY : src/database/Database.s
+
+# target to generate assembly for a file
+src/database/Database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/database/Database.cpp.s
+.PHONY : src/database/Database.cpp.s
+
 src/parser/CommandParser.o: src/parser/CommandParser.cpp.o
 .PHONY : src/parser/CommandParser.o
 
@@ -261,6 +285,9 @@ help:
 	@echo "... server/main.o"
 	@echo "... server/main.i"
 	@echo "... server/main.s"
+	@echo "... src/database/Database.o"
+	@echo "... src/database/Database.i"
+	@echo "... src/database/Database.s"
 	@echo "... src/parser/CommandParser.o"
 	@echo "... src/parser/CommandParser.i"
 	@echo "... src/parser/CommandParser.s"

@@ -43,6 +43,7 @@ void Server::start()
 
         ClientHandler handler(
             socket_,
+            database_,
             clientFd);
 
         handler.handle();

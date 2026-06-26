@@ -1,18 +1,22 @@
 #include "../../include/server/ClientHandler.h"
+#include "../../include/parser/CommandParser.h"
 
 #include <iostream>
 #include <string>
 
 ClientHandler::ClientHandler(
     Socket& socket,
+    Database& database,
     int clientFd)
     : socket_(socket),
+      database_(database),
       clientFd_(clientFd)
 {
 }
 
 void ClientHandler::handle()
 {
+    CommandParser parser;
     while (true)
     {
         std::string message =
@@ -26,14 +30,57 @@ void ClientHandler::handle()
             break;
         }
 
-        std::cout
-            << "Received: "
-            << message
-            << '\n';
+        Command command =
+            parser.parse(message);
 
-        socket_.sendMessage(
-            clientFd_,
-            "Message received by CacheCore\n"
-        );
+        if (command.name == "SET")
+        {
+            if (command.arguments.size() != 2)
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "ERR invalid SET command\n"
+                );
+
+                continue;
+            }
+
+            database_.set(
+                command.arguments[0],
+                command.arguments[1]);
+
+            socket_.sendMessage(
+                clientFd_,
+                "OK\n"
+            );
+        }
+        else if (command.name == "GET")
+        {
+            if (command.arguments.size() != 1)
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "ERR invalid GET command\n"
+                );
+
+                continue;
+            }
+
+            std::string value =
+                database_.get(
+                    command.arguments[0]);
+
+            socket_.sendMessage(
+                clientFd_,
+                value + "\n"
+            );
+        }
+        else
+        {
+            socket_.sendMessage(
+                clientFd_,
+                "ERR unknown command\n"
+            );
+        }
     }
 }
