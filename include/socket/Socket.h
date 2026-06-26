@@ -14,4 +14,6 @@ public:
     void create();
 
     int getFd() const;
+
+    void bind(int port);
 };
