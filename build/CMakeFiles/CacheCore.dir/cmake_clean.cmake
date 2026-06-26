@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CacheCore.dir/server/main.cpp.o.d"
   "CMakeFiles/CacheCore.dir/src/database/Database.cpp.o"
   "CMakeFiles/CacheCore.dir/src/database/Database.cpp.o.d"
+  "CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.o"
+  "CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.o.d"
   "CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.o"
   "CMakeFiles/CacheCore.dir/src/parser/CommandParser.cpp.o.d"
   "CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o"

@@ -10,6 +10,7 @@ ClientHandler::ClientHandler(
     int clientFd)
     : socket_(socket),
       database_(database),
+      executor_(database),
       clientFd_(clientFd)
 {
 }

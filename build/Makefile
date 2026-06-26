@@ -177,6 +177,30 @@ src/database/Database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/database/Database.cpp.s
 .PHONY : src/database/Database.cpp.s
 
+src/executor/CommandExecutor.o: src/executor/CommandExecutor.cpp.o
+.PHONY : src/executor/CommandExecutor.o
+
+# target to build an object file
+src/executor/CommandExecutor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.o
+.PHONY : src/executor/CommandExecutor.cpp.o
+
+src/executor/CommandExecutor.i: src/executor/CommandExecutor.cpp.i
+.PHONY : src/executor/CommandExecutor.i
+
+# target to preprocess a source file
+src/executor/CommandExecutor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.i
+.PHONY : src/executor/CommandExecutor.cpp.i
+
+src/executor/CommandExecutor.s: src/executor/CommandExecutor.cpp.s
+.PHONY : src/executor/CommandExecutor.s
+
+# target to generate assembly for a file
+src/executor/CommandExecutor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.s
+.PHONY : src/executor/CommandExecutor.cpp.s
+
 src/parser/CommandParser.o: src/parser/CommandParser.cpp.o
 .PHONY : src/parser/CommandParser.o
 
@@ -288,6 +312,9 @@ help:
 	@echo "... src/database/Database.o"
 	@echo "... src/database/Database.i"
 	@echo "... src/database/Database.s"
+	@echo "... src/executor/CommandExecutor.o"
+	@echo "... src/executor/CommandExecutor.i"
+	@echo "... src/executor/CommandExecutor.s"
 	@echo "... src/parser/CommandParser.o"
 	@echo "... src/parser/CommandParser.i"
 	@echo "... src/parser/CommandParser.s"

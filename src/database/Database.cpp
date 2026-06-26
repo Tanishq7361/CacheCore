@@ -4,7 +4,7 @@ bool Database::set(
     const std::string& key,
     const std::string& value)
 {
-    data_[key] = value;
+    data_[key].value = value;
 
     return true;
 }
@@ -19,7 +19,7 @@ std::string Database::get(
         return "(nil)";
     }
 
-    return it->second;
+    return it->second.value;
 }
 
 bool Database::del(const std::string& key)

@@ -13,6 +13,7 @@ add_executable(
     src/server/ClientHandler.cpp
     src/parser/CommandParser.cpp
     src/database/Database.cpp
+    src/executor/CommandExecutor.cpp
 )
 
 target_include_directories(

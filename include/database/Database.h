@@ -3,14 +3,15 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include "Entry.h"
 
 class Database
 {
 private:
-    std::unordered_map<
-        std::string,
-        std::string
-    > data_;
+std::unordered_map<
+    std::string,
+    Entry
+> data_;
 
 public:
     bool set(

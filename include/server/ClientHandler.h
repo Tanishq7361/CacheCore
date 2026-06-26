@@ -13,15 +13,10 @@ private:
     int clientFd_;
 
 public:
-    ClientHandler::ClientHandler(
+    ClientHandler(
         Socket& socket,
         Database& database,
-        int clientFd)
-        : socket_(socket),
-        database_(database),
-        executor_(database),
-        clientFd_(clientFd)
-    {
-    }
+        int clientFd);
+
     void handle();
 };
