@@ -52,7 +52,7 @@ void Server::start()
                 << "Client disconnected\n";
                 break;
             }
-            close(clientFd);
+            // close(clientFd);
             std::cout
                 << "Received: "
                 << message
