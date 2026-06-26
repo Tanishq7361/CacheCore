@@ -31,27 +31,37 @@ void Server::start()
         << port_
         << '\n';
 
-    std::cout
-        << "Waiting for client...\n";
+    while (true)
+    {
+        std::cout
+            << "\nWaiting for client...\n";
 
-    int clientFd = socket_.accept();
+        int clientFd = socket_.accept();
 
-    std::cout
-        << "Client connected\n";
+        std::cout
+            << "Client connected\n";
 
-    std::cout
-        << "Waiting for message...\n";
+        while (true)
+        {
+            std::string message =
+                socket_.receive(clientFd);
 
-    std::string message =
-        socket_.receive(clientFd);
+            if (message.empty())
+            {
+                std::cout
+                << "Client disconnected\n";
+                break;
+            }
+            close(clientFd);
+            std::cout
+                << "Received: "
+                << message
+                << '\n';
 
-    std::cout
-        << "Received: "
-        << message
-        << '\n';
-
-    socket_.sendMessage(
-        clientFd,
-        "Message received by CacheCore\n"
-    );
+            socket_.sendMessage(
+                clientFd,
+                "Message received by CacheCore\n"
+            );
+        }
+    }
 }
