@@ -13,6 +13,9 @@ int main()
         std::cout<< "Bound to port 6379\n";
         socket.listen(128);
         std::cout << "Listening on port 6379\n";
+
+        int clientFd = socket.accept();
+        std::cout<< "Client connected. FD = "<< clientFd<< '\n';
     }
     catch (const std::exception& e)
     {

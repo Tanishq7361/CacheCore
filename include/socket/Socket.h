@@ -19,4 +19,6 @@ public:
     void bind(int port);
 
     void listen(int backlog = SOMAXCONN);
+
+    int accept();
 };
