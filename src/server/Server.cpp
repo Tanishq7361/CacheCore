@@ -37,20 +37,19 @@ void Server::start()
 
     while (true)
     {
-        std::cout
-            << "\nWaiting for client...\n";
-
         int clientFd = socket_.accept();
 
-        std::cout
-            << "Client connected\n";
+        std::thread(
+            [this, clientFd]()
+            {
+                ClientHandler handler(
+                    socket_,
+                    database_,
+                    clientFd);
 
-        ClientHandler handler(
-            socket_,
-            database_,
-            clientFd);
-
-        handler.handle();
+                handler.handle();
+            }
+        ).detach();
     }
 }
 

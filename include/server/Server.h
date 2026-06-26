@@ -3,6 +3,8 @@
 #include "../socket/Socket.h"
 #include "../database/Database.h"
 #include "../ttl/TTLManager.h"
+#include <thread>
+#include <vector>
 
 class Server
 {
@@ -11,7 +13,7 @@ private:
     Database database_;
     TTLManager ttlManager_;
     int port_;
-
+    std::vector<std::thread> clientThreads_;
 public:
     explicit Server(int port);
 
