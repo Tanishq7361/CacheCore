@@ -2,6 +2,7 @@
 #include "../../include/server/ClientHandler.h"
 #include <iostream>
 #include <string>
+#include <thread>
 
 Server::Server(int port)
     : socket_(),
@@ -40,19 +41,33 @@ void Server::start()
 
     while (true)
     {
-        int clientFd = socket_.accept();
+        try{
+            int clientFd = socket_.accept();
 
-        std::thread(
-            [this, clientFd]()
-            {
-                ClientHandler handler(
-                    socket_,
-                    database_,
-                    clientFd);
+            std::cout
+                << "Client connected. FD = "
+                << clientFd
+                << '\n';
 
-                handler.handle();
-            }
-        ).detach();
+            std::thread(
+                [this, clientFd]()
+                {
+                    ClientHandler handler(
+                        socket_,
+                        database_,
+                        clientFd);
+
+                    handler.handle();
+                }
+            ).detach();
+        }
+        catch (const std::exception& e)
+        {
+            std::cerr
+                << "Accept error: "
+                << e.what()
+                << '\n';
+        }
     }
 }
 
