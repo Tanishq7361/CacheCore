@@ -6,6 +6,7 @@
 #include <cstring>
 #include <stdexcept>
 #include <netinet/in.h>
+#include <string>
 
 Socket::Socket()
     : fd_(-1)
@@ -82,4 +83,27 @@ int Socket::accept()
 int Socket::getFd() const
 {
     return fd_;
+}
+
+std::string Socket::receive(int clientFd)
+{
+    char buffer[1024];
+
+    ssize_t bytesReceived =
+        recv(clientFd,
+             buffer,
+             sizeof(buffer) - 1,
+             0);
+
+    if (bytesReceived == -1)
+    {
+        throw std::runtime_error(
+            std::string("Receive failed: ") +
+            std::strerror(errno)
+        );
+    }
+
+    buffer[bytesReceived] = '\0';
+
+    return std::string(buffer);
 }

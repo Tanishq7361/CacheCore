@@ -1,6 +1,7 @@
 #include "../include/socket/Socket.h"
 
 #include <iostream>
+#include <string>
 
 int main()
 {
@@ -15,7 +16,19 @@ int main()
         std::cout << "Listening on port 6379\n";
 
         int clientFd = socket.accept();
-        std::cout<< "Client connected. FD = "<< clientFd<< '\n';
+
+        std::cout
+            << "Client connected. FD = "
+            << clientFd
+            << '\n';
+
+        std::string message =
+            socket.receive(clientFd);
+
+        std::cout
+            << "Received: "
+            << message
+            << '\n';
     }
     catch (const std::exception& e)
     {

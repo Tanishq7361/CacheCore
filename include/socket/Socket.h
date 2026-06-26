@@ -1,6 +1,7 @@
 #pragma once
 #include <stdexcept>
 #include <sys/socket.h>
+#include <string>
 
 class Socket
 {
@@ -21,4 +22,7 @@ public:
     void listen(int backlog = SOMAXCONN);
 
     int accept();
+
+    std::string receive(int clientFd);
+
 };
