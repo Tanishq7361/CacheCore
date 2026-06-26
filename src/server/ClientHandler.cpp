@@ -158,6 +158,25 @@ void ClientHandler::handle()
                 response
             );
         }
+        else if (command.name == "CLEAR")
+        {
+            if (!command.arguments.empty())
+            {
+                socket_.sendMessage(
+                    clientFd_,
+                    "ERR CLEAR takes no arguments\n"
+                );
+
+                continue;
+            }
+
+            database_.clear();
+
+            socket_.sendMessage(
+                clientFd_,
+                "OK\n"
+            );
+        }
         else
         {
             socket_.sendMessage(

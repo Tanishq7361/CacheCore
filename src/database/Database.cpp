@@ -45,3 +45,8 @@ std::vector<std::string> Database::keys() const
 
     return result;
 }
+
+void Database::clear()
+{
+    data_.clear();
+}
