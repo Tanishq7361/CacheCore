@@ -202,4 +202,5 @@ CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.o: \
  /usr/include/c++/13/variant /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /home/tanishq/project/CacheCore/src/executor/../../include/executor/../parser/Command.h
+ /home/tanishq/project/CacheCore/src/executor/../../include/executor/../parser/Command.h \
+ /home/tanishq/project/CacheCore/src/executor/../../include/executor/../persistence/Serializer.h

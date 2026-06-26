@@ -27,7 +27,6 @@ void ClientHandler::handle()
         {
             std::cout
                 << "Client disconnected\n";
-
             break;
         }
 

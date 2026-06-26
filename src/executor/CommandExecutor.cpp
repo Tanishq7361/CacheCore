@@ -119,6 +119,40 @@ std::string CommandExecutor::execute(const Command& command)
             database_.ttl(command.arguments[0])
         ) + "\n";
     }
+    else if (command.name == "SAVE")
+    {
+        if (!command.arguments.empty())
+        {
+            return "ERR SAVE takes no arguments\n";
+        }
+
+        bool success =
+            serializer_.save(
+                database_,
+                "cachecore.rdb"
+            );
+
+        return success
+            ? "OK\n"
+            : "ERR failed to save\n";
+    }
+    else if (command.name == "LOAD")
+    {
+        if (!command.arguments.empty())
+        {
+            return "ERR LOAD takes no arguments\n";
+        }
+
+        bool success =
+            serializer_.load(
+                database_,
+                "cachecore.rdb"
+            );
+
+        return success
+            ? "OK\n"
+            : "ERR failed to load\n";
+    }
 
     return "ERR unknown command\n";
 }

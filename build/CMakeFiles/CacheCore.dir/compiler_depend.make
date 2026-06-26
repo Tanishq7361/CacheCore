@@ -570,6 +570,7 @@ CMakeFiles/CacheCore.dir/src/executor/CommandExecutor.cpp.o: /home/tanishq/proje
   /home/tanishq/project/CacheCore/include/database/Database.h \
   /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
+  /home/tanishq/project/CacheCore/include/persistence/Serializer.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -1289,6 +1290,7 @@ CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o: /home/tanishq/project/C
   /home/tanishq/project/CacheCore/include/database/Database.h \
   /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
+  /home/tanishq/project/CacheCore/include/persistence/Serializer.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
   /home/tanishq/project/CacheCore/include/server/ClientHandler.h \
@@ -1565,6 +1567,7 @@ CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: /home/tanishq/project/CacheCor
   /home/tanishq/project/CacheCore/include/database/Database.h \
   /home/tanishq/project/CacheCore/include/database/Entry.h \
   /home/tanishq/project/CacheCore/include/parser/Command.h \
+  /home/tanishq/project/CacheCore/include/persistence/Serializer.h \
   /home/tanishq/project/CacheCore/include/executor/CommandExecutor.h \
   /home/tanishq/project/CacheCore/include/socket/Socket.h \
   /home/tanishq/project/CacheCore/include/ttl/TTLManager.h \

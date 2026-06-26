@@ -253,4 +253,5 @@ CMakeFiles/CacheCore.dir/src/server/Server.cpp.o: \
  /home/tanishq/project/CacheCore/src/server/../../include/server/ClientHandler.h \
  /home/tanishq/project/CacheCore/src/server/../../include/server/../executor/CommandExecutor.h \
  /home/tanishq/project/CacheCore/src/server/../../include/server/../executor/../parser/Command.h \
+ /home/tanishq/project/CacheCore/src/server/../../include/server/../executor/../persistence/Serializer.h \
  /usr/include/c++/13/iostream

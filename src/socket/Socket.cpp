@@ -32,6 +32,20 @@ void Socket::create()
             std::strerror(errno)
         );
     }
+    int opt = 1;
+
+    if (setsockopt(
+            fd_,
+            SOL_SOCKET,
+            SO_REUSEADDR,
+            &opt,
+            sizeof(opt)) == -1)
+    {
+        throw std::runtime_error(
+            std::string("setsockopt failed: ") +
+            std::strerror(errno)
+        );
+    }
 }
 
 void Socket::bind(int port)
