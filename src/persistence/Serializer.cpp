@@ -53,3 +53,27 @@ bool Serializer::save(
     }
     return true;
 }
+
+bool Serializer::load(
+    Database& database,
+    const std::string& filename)
+{
+    std::ifstream in(
+        filename,
+        std::ios::binary
+    );
+
+    if (!in)
+    {
+        return false;
+    }
+
+    std::size_t count;
+
+    in.read(
+        reinterpret_cast<char*>(&count),
+        sizeof(count)
+    );
+
+    return true;
+}
