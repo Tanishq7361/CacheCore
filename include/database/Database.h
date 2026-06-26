@@ -35,4 +35,5 @@ public:
     bool isExpired(const Entry& entry) const;
 
     long long ttl(const std::string& key);
+    void removeExpiredKeys();
 };

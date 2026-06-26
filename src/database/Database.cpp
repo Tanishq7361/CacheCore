@@ -116,3 +116,22 @@ long long Database::ttl(const std::string& key)
 
     return remaining.count();
 }
+
+void Database::removeExpiredKeys()
+{
+    std::lock_guard<std::mutex> lock(mutex_);
+
+    auto it = data_.begin();
+
+    while (it != data_.end())
+    {
+        if (isExpired(it->second))
+        {
+            it = data_.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+}
