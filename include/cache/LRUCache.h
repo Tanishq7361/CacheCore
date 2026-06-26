@@ -18,6 +18,9 @@ private:
         ListIterator
     > cacheMap_;
 
+    void touch(ListIterator it);
+
 public:
     explicit LRUCache(std::size_t capacity);
+    
 };
