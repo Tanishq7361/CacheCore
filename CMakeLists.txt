@@ -14,6 +14,7 @@ add_executable(
     src/parser/CommandParser.cpp
     src/database/Database.cpp
     src/executor/CommandExecutor.cpp
+    src/ttl/TTLManager.cpp
 )
 
 target_include_directories(

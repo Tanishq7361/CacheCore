@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tanishq/project/CacheCore/src/server/ClientHandler.cpp" "CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o" "gcc" "CMakeFiles/CacheCore.dir/src/server/ClientHandler.cpp.o.d"
   "/home/tanishq/project/CacheCore/src/server/Server.cpp" "CMakeFiles/CacheCore.dir/src/server/Server.cpp.o" "gcc" "CMakeFiles/CacheCore.dir/src/server/Server.cpp.o.d"
   "/home/tanishq/project/CacheCore/src/socket/Socket.cpp" "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o" "gcc" "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o.d"
+  "/home/tanishq/project/CacheCore/src/ttl/TTLManager.cpp" "CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o" "gcc" "CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

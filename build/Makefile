@@ -297,6 +297,30 @@ src/socket/Socket.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.s
 .PHONY : src/socket/Socket.cpp.s
 
+src/ttl/TTLManager.o: src/ttl/TTLManager.cpp.o
+.PHONY : src/ttl/TTLManager.o
+
+# target to build an object file
+src/ttl/TTLManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o
+.PHONY : src/ttl/TTLManager.cpp.o
+
+src/ttl/TTLManager.i: src/ttl/TTLManager.cpp.i
+.PHONY : src/ttl/TTLManager.i
+
+# target to preprocess a source file
+src/ttl/TTLManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.i
+.PHONY : src/ttl/TTLManager.cpp.i
+
+src/ttl/TTLManager.s: src/ttl/TTLManager.cpp.s
+.PHONY : src/ttl/TTLManager.s
+
+# target to generate assembly for a file
+src/ttl/TTLManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CacheCore.dir/build.make CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.s
+.PHONY : src/ttl/TTLManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,6 +351,9 @@ help:
 	@echo "... src/socket/Socket.o"
 	@echo "... src/socket/Socket.i"
 	@echo "... src/socket/Socket.s"
+	@echo "... src/ttl/TTLManager.o"
+	@echo "... src/ttl/TTLManager.i"
+	@echo "... src/ttl/TTLManager.s"
 .PHONY : help
 
 

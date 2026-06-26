@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <vector>
 #include "Entry.h"
+#include <mutex>
 
 class Database
 {
@@ -12,6 +13,7 @@ std::unordered_map<
     std::string,
     Entry
 > data_;
+mutable std::mutex mutex_;
 
 public:
     bool set(

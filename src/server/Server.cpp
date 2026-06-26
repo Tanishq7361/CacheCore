@@ -4,7 +4,10 @@
 #include <string>
 
 Server::Server(int port)
-    : port_(port)
+    : socket_(),
+      database_(),
+      ttlManager_(database_),
+      port_(port)
 {
 }
 
@@ -25,6 +28,7 @@ void Server::start()
         << '\n';
 
     socket_.listen(128);
+    ttlManager_.start();
 
     std::cout
         << "Listening on port "
@@ -49,3 +53,4 @@ void Server::start()
         handler.handle();
     }
 }
+

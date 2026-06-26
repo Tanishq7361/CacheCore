@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CacheCore.dir/src/server/Server.cpp.o.d"
   "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o"
   "CMakeFiles/CacheCore.dir/src/socket/Socket.cpp.o.d"
+  "CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o"
+  "CMakeFiles/CacheCore.dir/src/ttl/TTLManager.cpp.o.d"
   "CacheCore"
   "CacheCore.pdb"
 )

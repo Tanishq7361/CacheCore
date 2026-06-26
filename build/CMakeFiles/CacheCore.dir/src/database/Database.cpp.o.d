@@ -198,4 +198,6 @@ CMakeFiles/CacheCore.dir/src/database/Database.cpp.o: \
  /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/format \
  /usr/include/c++/13/array /usr/include/c++/13/charconv \
  /usr/include/c++/13/optional /usr/include/c++/13/span \
- /usr/include/c++/13/variant /usr/include/c++/13/bits/ranges_algobase.h
+ /usr/include/c++/13/variant /usr/include/c++/13/bits/ranges_algobase.h \
+ /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h
